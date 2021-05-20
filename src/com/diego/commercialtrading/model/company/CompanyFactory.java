@@ -10,8 +10,11 @@ public class CompanyFactory {
     public static List<Company> create(int quant) {
         List<Company> companies = new ArrayList<>();
         for (int i = 0; i < quant; i++) {
-            List<Depot> depots = DepotFactory.create(50);
-            companies.add(new Company(depots));
+            Company company = new Company();
+            int companyId = company.getId();
+            List<Depot> depots = DepotFactory.create(companyId, 50);
+            company.setDepots(depots);
+            companies.add(company);
         }
         return companies;
     }

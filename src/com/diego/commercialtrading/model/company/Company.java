@@ -10,13 +10,16 @@ public class Company {
     private int id;
     private List<Depot> depots = new ArrayList<>();
 
-    public Company(List<Depot> depots){
+    public Company(){
         this.id = ++ID;
-        this.depots = depots;
     }
 
     public int getId() {
         return this.id;
+    }
+
+    public void setDepots(List<Depot> depots) {
+        this.depots = depots;
     }
 
     public List<Depot> getDepots() {
