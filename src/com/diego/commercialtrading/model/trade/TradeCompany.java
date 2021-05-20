@@ -14,12 +14,13 @@ public class TradeCompany {
 
     public void startTrading() {
         
-        while(traders.getTraders().size() > 1) {          
+        while(traders.getTraders().size() > 1) {    
+            // System.out.println("size: " + traders.getTraders().size());      
             facade.trade();
         }
     }
 
-    public List<Record> getRecords() {
+    public List<TradeRecord> getRecords() {
         return facade.getRecords();
     }
 }

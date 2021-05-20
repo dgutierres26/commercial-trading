@@ -3,12 +3,12 @@ package com.diego.commercialtrading.model.trade;
 import com.diego.commercialtrading.model.depot.Depot;
 import com.diego.commercialtrading.model.product.Product;
 
-public class Record {
+public class TradeRecord {
     private Depot buyer;
     private Depot seller;
     private Product product;
 
-    public Record(Depot buyer, Depot seller, Product product) {
+    public TradeRecord(Depot buyer, Depot seller, Product product) {
         this.buyer = buyer;
         this.seller = seller;
         this.product = product;

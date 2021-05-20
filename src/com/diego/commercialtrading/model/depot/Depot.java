@@ -77,7 +77,7 @@ public class Depot {
     }
 
     public void buy(Product product) {
-        nativeProduct.add(product);
+        externalProduct.add(product);
     }
 
     public Product get(int index) {

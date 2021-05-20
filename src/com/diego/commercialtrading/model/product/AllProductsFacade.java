@@ -1,7 +1,7 @@
 package com.diego.commercialtrading.model.product;
 import java.util.List;
 
-import com.diego.commercialtrading.model.trade.Record;
+import com.diego.commercialtrading.model.trade.TradeRecord;
 import com.diego.commercialtrading.model.company.Company;
 import com.diego.commercialtrading.model.depot.Depot;
 
@@ -15,15 +15,15 @@ public class AllProductsFacade {
         }
     }
 
-    public void showAllRecords(List<Record> records) {
-        for (Record record : records) {
+    public void showAllRecords(List<TradeRecord> records) {
+        for (TradeRecord record : records) {
             System.out.println(record);
         }
     }
 
-    public void showCompanyRecords(Company company, List<Record> records) {
+    public void showCompanyRecords(Company company, List<TradeRecord> records) {
         int companyId = company.getId();
-        for (Record record : records) {
+        for (TradeRecord record : records) {
             if (record.getBuyer().getCompanyId() == companyId 
                             || record.getSeller().getCompanyId() == companyId) {
                 System.out.println(record);
